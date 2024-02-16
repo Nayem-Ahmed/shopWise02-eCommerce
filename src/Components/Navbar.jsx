@@ -3,6 +3,8 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import './navbar.css';
 import logo from '../assets/logo.webp';
+import { IoIosArrowDown } from "react-icons/io";
+
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +28,7 @@ const Navbar = () => {
                 </div>
                 <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
                     <li><Link className='hover:text-red-500' to="/" onClick={closeMenu}>HOME</Link></li>
-                    <li><Link className='hover:text-red-500' to="/pages" onClick={closeMenu}>PAGES</Link></li>
+                    <li className='flex hover:text-red-500'><Link className='hover:text-red-500' to="/pages" onClick={closeMenu}>PAGES</Link><IoIosArrowDown className='relative mt-1'></IoIosArrowDown></li>
                     <li><Link className='hover:text-red-500' to="/products" onClick={closeMenu}>PRODUCTS</Link></li>
                     <li><Link className='hover:text-red-500' to="/shop" onClick={closeMenu}>SHOP</Link></li>
                     <li><Link className='hover:text-red-500' to="/blog" onClick={closeMenu}>BLOG</Link></li>
