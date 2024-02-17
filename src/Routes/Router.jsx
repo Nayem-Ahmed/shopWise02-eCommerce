@@ -6,16 +6,16 @@ import Blog from "../Pages/Blog";
 
 const router = createBrowserRouter([
     {
-        path:'/',
-        element:<Root></Root>,
-        errorElement:<ErrorPage></ErrorPage>,
-        children:[
+        path: '/',
+        element: <Root></Root>,
+        errorElement: <ErrorPage></ErrorPage>,
+        children: [
             {
-                path:'/',
-                element:<Home></Home>,
+                path: '/',
+                element: <Home></Home>,
             },
             {
-                path:'/blog',
+                path: '/blog',
                 element: <Blog></Blog>,
             }
         ]
