@@ -25,6 +25,7 @@
 
 .nav-menu li {
     margin-right: 1rem;
+    position: relative;
 }
 
 .nav-menu li:last-child {
@@ -36,6 +37,39 @@
     color: #111;
     font-weight: 500;
 }
+/* dropdown menu */
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position it below the parent link */
+    left: 0;
+    right: 0;
+    z-index: 1; /* Ensure it appears above other content */
+    background-color: #333;
+    padding: 1rem;
+    width: 200px;
+}
+
+.dropdown-menu li {
+    display: block;
+    border: none;
+    border-left: 0;
+    padding: 0.5rem 0;
+}
+
+.dropdown-menu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-menu li:hover .dropdown-menu {
+    display: block; /* Show dropdown menu on hover */
+}
+
+
+
+/*    Resposive Small screen     */
 
 @media screen and (max-width: 768px) {
     .menu-icon {

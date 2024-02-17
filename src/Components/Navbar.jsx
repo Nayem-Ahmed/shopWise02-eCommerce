@@ -18,7 +18,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="navbar">
+        <nav className="navbar z-50 relative">
             <div className="navbar-container">
                 <div className="navbar-logo">
                     <Link to="/"><img className='max-w-44' src={logo} alt="Logo" /></Link>
@@ -28,7 +28,16 @@ const Navbar = () => {
                 </div>
                 <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
                     <li><Link className='hover:text-red-500' to="/" onClick={closeMenu}>HOME</Link></li>
-                    <li className='flex hover:text-red-500'><Link className='hover:text-red-500' to="/pages" onClick={closeMenu}>PAGES</Link><IoIosArrowDown className='relative mt-1'></IoIosArrowDown></li>
+                    <li className='flex hover:text-red-500'><Link className='hover:text-red-500'  onClick={closeMenu}>PAGES</Link><IoIosArrowDown className='relative mt-1'></IoIosArrowDown>
+                    {/* DropdownMenu */}
+                    <ul className='dropdown-menu'>
+                        <li><Link className='hover:text-red-500' to='/' onClick={closeMenu}>FAQ</Link></li>
+                        <li><Link className='hover:text-red-500' to='/' onClick={closeMenu}>404 Error Page</Link></li>
+                        <li><Link className='hover:text-red-500' to='/' onClick={closeMenu}>Login</Link></li>
+                        <li><Link className='hover:text-red-500' to='/' onClick={closeMenu}>Register</Link></li>
+                        <li><Link className='hover:text-red-500' to='/' onClick={closeMenu}>Terms And Conditions</Link></li>
+                    </ul> 
+                    </li>
                     <li><Link className='hover:text-red-500' to="/products" onClick={closeMenu}>PRODUCTS</Link></li>
                     <li><Link className='hover:text-red-500' to="/shop" onClick={closeMenu}>SHOP</Link></li>
                     <li><Link className='hover:text-red-500' to="/blog" onClick={closeMenu}>BLOG</Link></li>
