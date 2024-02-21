@@ -6,7 +6,7 @@ const CallToSection = () => {
         <>
             <div className='bg-[#2d3436] border-b p-28  flex flex-col items-center justify-between'>
                 <div>
-                    <h1 className='text-white md:text-3xl'>Subscribe Our Newsletter</h1>
+                    <h1 className='text-white md:text-3xl mb-4'>Subscribe Our Newsletter</h1>
                 </div>
                 <div>
                     <form className='md:text-right'>
